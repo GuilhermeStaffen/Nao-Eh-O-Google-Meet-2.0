@@ -89,8 +89,9 @@ async function login() {
   const uname = document.getElementById('uname');
   const psw = document.getElementById('psw');
   if (uname.value == 'user1' && psw.value == '123'){
-    window.alert("usuario 1")
+    window.location = urlAPI+'mainScreen?UserName=user1'
   }
+
   else if (uname.value == 'user2' && psw.value == '123'){
     window.alert("usuario 2")
   }

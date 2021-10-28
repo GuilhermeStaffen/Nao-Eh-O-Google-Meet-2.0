@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Não é o Google Meet 2.0</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="index.js" charset="utf-8" defer></script>
+  <script type="text/javascript">
+    var userName = "<%= UserName %>"
+  </script>
+</head>
+
+<body style="background-color: #161d29;" onload="">
+  <div class="header">
+    <div class="logo">
+      <div class="header__back">
+        <i class="fas fa-angle-left"></i>
+      </div>
+      <h3>Não é o Google Meet 2.0</h2>
+    </div>
+  </div>
+  <div class="formLogin">
+    <div class="login-container">
+      Usuario <span id="userName"></span> Logado
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+<script>
+  window.onload = function() {
+    console.log(userName)
+    document.getElementById("userName").innerText = userName
+  }
+</script>
+</body>
+
+</html>
