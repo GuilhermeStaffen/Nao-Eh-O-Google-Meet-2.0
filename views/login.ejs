@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="pt-br">
 
 <head>
   <meta charset="utf-8" />
@@ -12,14 +12,14 @@
 <body style="background-color: #161d29;">
   <div class="header">
     <div class="logo">
-      <div class="header__back">
+      <div class="headerBack">
         <i class="fas fa-angle-left"></i>
       </div>
       <h3>Não é o Google Meet 2.0</h2>
     </div>
   </div>
   <div class="formLogin">
-    <div class="login-container">
+    <div class="loginContainer">
       <label for="uname"><b>Usuário</b></label>
       <input type="text" placeholder="Insira o Usuário" name="uname" id="uname">
       <label for="psw"><b>Senha</b></label>
@@ -29,21 +29,6 @@
   </div>
 </body>
 <script src="script.js"></script>
-<script>
-  async function login() {
-    const uname = document.getElementById('uname');
-    const psw = document.getElementById('psw');
-    if (uname.value == 'user1' && psw.value == '123'){
-      window.alert("usuario 1")
-    }
-    else if (uname.value == 'user2' && psw.value == '123'){
-      window.alert("usuario 2")
-    }
-    else {
-      window.alert("usuário ou senha inválidos")
-    }
-  }
-</script>
 </body>
 
 </html>

@@ -9,7 +9,18 @@ body {
   margin: 10% 35% 10% 35%;
 }
 
-.login-container > label {
+.form{
+  border: 3px solid #1d2635;
+  margin: 0% 25% 0% 25%;
+  padding: 16px;
+  color: #fff;
+}
+
+.mgTop {
+  margin: 10% 25% 3% 25%;
+}
+
+.loginContainer > label {
   color: #eeeeee;
 }
 
@@ -37,8 +48,9 @@ button:hover {
   opacity: 0.8;
 }
 
-.login-container {
+.loginContainer {
   padding: 16px;
+  color: #fff;
 }
 
 span.psw {
@@ -219,7 +231,7 @@ video {
   display: none;
 }
 
-.header__back {
+.headerBack {
   display: none;
   position: absolute;
   font-size: 1.3rem;
