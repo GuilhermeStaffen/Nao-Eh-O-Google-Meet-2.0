@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Não é o Google Meet 2.0</title>
+  <script type="text/javascript">
+    var roomID = "<%= RoomId %>"
+  </script>
+  <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+  <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js" defer></script>
+  <script src="socket.io/socket.io.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="index.js" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo">
+      <div class="headerBack">
+        <i class="fas fa-angle-left"></i>
+      </div>
+      <h3>Não é o Google Meet 2.0</h2>
+    </div>
+  </div>
+  <div class="main">
+    <div class="videosGroup">
+      <div id="videoDiv">
+
+      </div>
+    </div>
+    <div class="options">
+        <div id="stopVideo" class="optionsButton">
+          <i class="fa fa-video-camera"></i>
+        </div>
+        <div id="muteButton" class="optionsButton">
+          <i class="fa fa-microphone"></i>
+        </div>
+        <div id="inviteButton" class="optionsButton">
+          <i class="fas fa-user-plus"></i>
+        </div>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+</body>
+
+</html>
