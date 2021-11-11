@@ -1,16 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+
+:root {
+  --main-darklg: #382039;
+  --main-dark: #200F21;
+  --primary-color: #5A3D5C;
+  --main-light: #eeeeee;
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--main-dark);
 }
 
 .formLogin {
-  border: 3px solid #1d2635;
+  border: 3px solid var(--main-darklg);
   margin: 10% 35% 10% 35%;
 }
 
 .form{
-  border: 3px solid #1d2635;
+  border: 3px solid var(--main-darklg);
   margin: 0% 25% 0% 25%;
   padding: 16px;
   color: #fff;
@@ -30,12 +40,12 @@ input[type=password] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #1d2635;
+  border: 1px solid var(--main-dark);
   box-sizing: border-box;
 }
 
 button {
-  background-color: #2f80ec;
+  background-color: var(--primary-color);
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -69,14 +79,6 @@ span.psw {
   }
 }
 
-:root {
-  --main-darklg: #1d2635;
-  --main-dark: #161d29;
-  --primary-color: #2f80ec;
-  --main-light: #eeeeee;
-  font-family: "Poppins", sans-serif;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -100,6 +102,7 @@ span.psw {
   overflow: hidden;
   height: 92vh;
   display: flex;
+  flex-direction: column;
 }
 
 .main__left {
@@ -108,7 +111,7 @@ span.psw {
   flex-direction: column;
 }
 
-.videos__group {
+.videosGroup {
   flex-grow: 1;
   display: flex;
   justify-content: center;
@@ -131,18 +134,13 @@ video {
 .options {
   padding: 1rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--main-darklg);
 }
 
-.options__left {
-  display: flex;
-}
 
-.options__right {
-  margin-left: auto;
-}
-
-.options__button {
+.optionsButton {
   display: flex;
   justify-content: center;
   align-items: center;
