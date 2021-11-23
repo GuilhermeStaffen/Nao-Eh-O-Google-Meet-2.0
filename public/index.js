@@ -117,7 +117,7 @@ async function getMeetCode() {
 
 async function getMeetUrl() {
   const meetInput = document.getElementById('meeturl');
-  let response = await fetch('http://' + window.location.host + '/meetCode');
+  let response = await fetch('https://' + window.location.host + '/meetCode');
   let data = await response.json();
   meetInput.value = data.code
   try {
