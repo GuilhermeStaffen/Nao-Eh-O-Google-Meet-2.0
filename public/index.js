@@ -120,11 +120,22 @@ async function getMeetUrl() {
   let response = await fetch('http://' + window.location.host + '/meetCode');
   let data = await response.json();
   meetInput.value = data.code
+  try {
+    await navigator.clipboard.writeText(data.code);
+    alert('Código da sala copiado');
+  } catch (err) {
+    alert('Erro ao copiar código: ' + err);
+  }
 }
 
 async function goToMeet() {
   const meetCode = document.getElementById('goToMeetInput');
-  window.location = 'http://' + window.location.host + '/' + meetCode.value;
+  if (meetCode.value.trim() != '') {
+    window.location = 'http://' + window.location.host + '/' + meetCode.value;
+  }
+  else{
+    alert("Insira um código")
+  }
 }
 
 async function login() {
