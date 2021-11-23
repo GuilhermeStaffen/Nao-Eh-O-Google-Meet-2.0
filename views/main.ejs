@@ -34,7 +34,14 @@
 <script src="script.js"></script>
 <script>
   window.onload = function () {
-    document.getElementById("userName").innerText = sessionStorage.getItem('user')
+    if (sessionStorage.getItem('user') == 'user1' || sessionStorage.getItem('user') == 'user2' ||  sessionStorage.getItem('user') == 'user3'){
+      console.log(sessionStorage.getItem('user') )
+      document.getElementById("userName").innerText = sessionStorage.getItem('user')
+    }
+    else {
+      console.log(window.location.host)
+      window.location = 'http://'+window.location.host
+    }
   }
 </script>
 </body>

@@ -30,19 +30,41 @@
       </div>
     </div>
     <div class="options">
-        <div id="stopVideo" class="optionsButton">
-          <i class="fa fa-video-camera"></i>
-        </div>
-        <div id="muteButton" class="optionsButton">
-          <i class="fa fa-microphone"></i>
-        </div>
-        <div id="inviteButton" class="optionsButton">
-          <i class="fas fa-user-plus"></i>
-        </div>
+      <div id="stopVideo" class="optionsButton">
+        <i class="fa fa-video-camera"></i>
+      </div>
+      <div id="muteButton" class="optionsButton">
+        <i class="fa fa-microphone"></i>
+      </div>
+      <div id="inviteButton" class="optionsButton" onclick="clipboardCopy()">
+        <i class="fas fa-user-plus"></i>
+      </div>
     </div>
   </div>
 </body>
 <script src="script.js"></script>
+<script>
+  window.onload = function () {
+    if (sessionStorage.getItem('user') == 'user1' || sessionStorage.getItem('user') == 'user2' || sessionStorage.getItem('user') == 'user3') {
+      console.log(sessionStorage.getItem('user'))
+      document.getElementById("userName").innerText = sessionStorage.getItem('user')
+    }
+    else {
+      console.log(window.location.host)
+      window.location = 'http://' + window.location.host
+    }
+  }
+</script>
+<script>
+  async function clipboardCopy() {
+    try {
+      await navigator.clipboard.writeText(roomID);
+      alert('Código da sala copiado');
+    } catch (err) {
+      alert('Erro ao copiar código: ' + err);
+    }
+  }
+</script>
 </body>
 
 </html>
