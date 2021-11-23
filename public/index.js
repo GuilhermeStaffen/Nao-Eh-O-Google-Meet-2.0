@@ -104,17 +104,6 @@ function addVideo(video, stream) {
   videoGrid.append(video);
 }
 
-async function getMeetCode() {
-  const requestOptions = {
-    method: 'GET',
-    headers: { 'Content-Type': 'application/json' }
-  };
-  const response = await fetch(urlAPI + "meetCode", requestOptions);
-  const myJson = await response.json();
-
-  window.alert(myJson.code)
-}
-
 async function getMeetUrl() {
   const meetInput = document.getElementById('meeturl');
   let response = await fetch('https://' + window.location.host + '/meetCode');
@@ -131,7 +120,7 @@ async function getMeetUrl() {
 async function goToMeet() {
   const meetCode = document.getElementById('goToMeetInput');
   if (meetCode.value.trim() != '') {
-    window.location = 'http://' + window.location.host + '/' + meetCode.value;
+    window.location = 'https://' + window.location.host + '/' + meetCode.value;
   }
   else{
     alert("Insira um código")

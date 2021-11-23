@@ -50,8 +50,8 @@
       document.getElementById("userName").innerText = sessionStorage.getItem('user')
     }
     else {
-      console.log(window.location.host)
-      //window.location = 'http://' + window.location.host
+      console.log("Erro: " + sessionStorage.getItem('user'))
+      window.location = 'http://' + window.location.host
     }
   }
 </script>
