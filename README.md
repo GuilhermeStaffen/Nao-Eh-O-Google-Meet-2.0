@@ -1,7 +1,7 @@
 # Não é o Google Meet 2.0
 
 *A aplicação pode ser acessada pelo link*
-https://meetv2.herokuapp.com
+https://nao-eh-o-google-meet-2-0.onrender.com/
 
 
 
